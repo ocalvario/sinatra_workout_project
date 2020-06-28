@@ -4,7 +4,6 @@ class UserController < ApplicationController
     erb :'users/new'
   end
   
-  
   get '/login' do
     erb :'users/login'
   end
