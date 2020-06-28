@@ -3,7 +3,8 @@ require './config/environment'
 class ApplicationController < Sinatra::Base
 
   configure do
-    set :views
+    set :public_folder, 'public'
+    set :views, 'app/views'
     enable :sessions
     set :session_secret, "password_security"
   end 
@@ -13,7 +14,11 @@ class ApplicationController < Sinatra::Base
   end
     
   get '/login' do
-    erb :'user/login'
+    erb :login
+  end
+  
+  get '/signup' do
+    erb :signup
   end
 
 end
