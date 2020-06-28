@@ -6,7 +6,7 @@ class UserController < ApplicationController
   
   
   get '/login' do
-    erb :login
+    erb :'users/login'
   end
   
 end
