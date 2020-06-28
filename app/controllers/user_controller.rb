@@ -8,4 +8,8 @@ class UserController < ApplicationController
     erb :'users/login'
   end
   
+  post '/login' do
+    redirect '/lifts'
+  end 
+  
 end
